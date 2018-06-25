@@ -1,0 +1,25 @@
+{
+  "name": "stylus-dashi",
+  "description": "Stylus variable & mixin",
+  "version": "0.1.0",
+  "main": "src/stylus/_dashi.styl",
+  "keywords": [
+    "stylus",
+    "variable",
+    "mixin",
+    "dashi"
+  ],
+  "homepage": "https://github.com/qrac/stylus-dashi",
+  "bugs": {
+    "url": "https://github.com/qrac/stylus-dashi/issues"
+  },
+  "author": {
+    "name": "Qrac",
+    "web": "https://twitter.com/Qrac_JP"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qrac/stylus-dashi.git"
+  },
+  "license": "CC0-1.0"
+}

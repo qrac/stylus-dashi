@@ -1,0 +1,129 @@
+//----------------------------------------------------
+// Mixin: Media Query
+//----------------------------------------------------
+
+//----------------------------------------------------
+// / Mobile First
+//----------------------------------------------------
+
+// Fablet size or more
+fablet()
+  @media screen and (min-width: $screen-width-fablet)
+    {block}
+
+// Tablet size or more
+tablet()
+  @media screen and (min-width: $screen-width-tablet)
+    {block}
+
+// Desktop size or more
+desktop()
+  @media screen and (min-width: $screen-width-desktop)
+    {block}
+
+// Wide size or more
+wide()
+  @media screen and (min-width: $screen-width-wide)
+    {block}
+
+//----------------------------------------------------
+// / Size Only
+//----------------------------------------------------
+
+// Mobile size only
+iphone5-only()
+  @media screen and (max-width: 320px)
+    {block}
+
+// Mobile size only
+mobile-only()
+  @media screen and (max-width: ($screen-width-fablet - 1px))
+    {block}
+
+// Fablet size only
+fablet-only()
+  @media screen and (min-width: $screen-width-fablet) and (max-width: ($screen-width-tablet - 1px))
+    {block}
+
+// Tablet size only
+tablet-only()
+  @media screen and (min-width: $screen-width-tablet) and (max-width: ($screen-width-desktop - 1px))
+    {block}
+
+// Desktop size only
+desktop-only()
+  @media screen and (min-width: $screen-width-desktop) and (max-width: ($screen-width-wide - 1px))
+    {block}
+
+// Wide size only
+wide-only()
+  @media screen and (min-width: $screen-width-wide)
+    {block}
+
+//----------------------------------------------------
+// / Combination
+//----------------------------------------------------
+
+// Mobile size ~ Fablet size
+mobile-fablet()
+  @media screen and (max-width: ($screen-width-tablet - 1px))
+    {block}
+
+// Mobile size ~ Tablet size
+mobile-tablet()
+  @media screen and (max-width: ($screen-width-desktop - 1px))
+    {block}
+
+// Mobile size ~ Desktop size
+mobile-desktop()
+  @media screen and (max-width: ($screen-width-wide - 1px))
+    {block}
+
+//----------------------------------------------------
+// / Landscape or Portrait
+//----------------------------------------------------
+
+// Landscape(tablet size or less)
+landscape()
+  @media all and (orientation: landscape) and (max-width: ($screen-width-desktop - 1px))
+    {block}
+
+// Portrait(tablet size or less)
+portrait()
+  @media all and (orientation: portrait) and (max-width: ($screen-width-desktop - 1px))
+    {block}
+
+//----------------------------------------------------
+// / Browser
+//----------------------------------------------------
+
+// Chrome and Opera
+chrome()
+  @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+    {block}
+
+// Firefox Only
+firefox()
+  @-moz-document url-prefix()
+    {block}
+
+// Edge Only
+edge()
+  @media all and (-ms-ime-align: auto)
+    {block}
+
+// IE Only
+ie()
+  @media all and (-ms-high-contrast: none)
+    {block}
+
+//----------------------------------------------------
+// / Media Query - Pattern
+//----------------------------------------------------
+
+mediaquery-pattern($mediaquery)
+  if $mediaquery == $screen-width-mobile
+    {block}
+  else
+    @media $mediaquery
+      {block}
