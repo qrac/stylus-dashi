@@ -6,7 +6,7 @@ Stylus 用の出汁的な変数・mixin セット。
 
 ## Use
 
-### [npm][link-npm]
+### [npm](https://www.npmjs.com/package/stylus-dashi)
 
 ```bash
 $ npm install stylus-dashi
